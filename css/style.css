@@ -1,0 +1,536 @@
+/* ========================================
+   UNCLE'S WIFE CLEANING DETERGENTS
+   MAIN STYLE SHEET
+   ======================================== */
+
+
+/* ================= BASIC WEBSITE SETTINGS ================= */
+
+/* Removes the default margin and padding
+   added by the browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Basic styling for the whole website */
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #F5F5F5;
+}
+
+
+/* ================= HEADINGS ================= */
+
+/* Uses Poppins for the headings */
+h1,
+h2,
+h3 {
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+
+/* Main website heading */
+h1 {
+    font-size: 2rem;
+}
+
+
+/* Page headings */
+h2 {
+    color: #1E88E5;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+
+/* Smaller section headings */
+h3 {
+    color: #1E88E5;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+
+/* ================= HEADER ================= */
+
+/* Styles the top part of the website */
+header {
+    background-color: #1E88E5;
+    color: #FFFFFF;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+
+/* Makes the website name white */
+header h1 {
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+}
+/* BUSINESS LOGO */
+.logo {
+    width: 180px;
+    height: auto;
+    margin: 0 auto 1rem auto;
+    display: block;
+    border-radius: 0;
+}
+
+/*NAVIGATION*/
+
+/* Removes bullet points and creates
+   a flexible navigation menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+
+/* Navigation links */
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    display: block;
+    border-radius: 5px;
+}
+
+
+/* Changes navigation link when
+   the mouse is over it */
+nav a:hover {
+    background-color: #FFFFFF;
+    color: #1E88E5;
+}
+
+
+/* Changes navigation link when
+   it is clicked */
+nav a:active {
+    background-color: #F5F5F5;
+    color: #1E88E5;
+}
+
+
+/*MAIN CONTENT*/
+
+/* Controls the size and position
+   of the main content */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+
+/*SECTIONS*/
+
+/* Gives normal sections a clean
+   white background */
+section {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/*HOME PAGE*/
+
+/* Adds the cleaning picture as the
+   background of the Home page only */
+.home-main {
+    background-image: url("../images/people_cleaning.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+
+/* Makes the Home page sections
+   easier to read over the background */
+.home-main #hero-section,
+.home-main .content-section {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* Centres the hero section */
+#hero-section {
+    text-align: center;
+}
+
+
+/* Styles the Learn More button
+   inside the hero section */
+#hero-section button {
+    margin-top: 1rem;
+}
+
+
+/*IMAGES*/
+
+/* Makes all images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 8px;
+}
+
+
+/* Styles normal website images */
+.website-image {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ================= PRODUCTS ================= */
+
+/* Creates a three-column Grid
+   for the products */
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+
+    /* Removes the normal section styling
+       from the product container */
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+}
+
+
+/* Styles each individual product */
+.product-card {
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+}
+
+
+/* Product images */
+.product-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+
+/* Adds an effect when the user
+   moves the mouse over a product */
+.product-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ================= SERVICES ================= */
+
+/* Creates a flexible layout
+   for the services */
+.services-container {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+
+    /* Removes the normal section styling
+       from the services container */
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+}
+
+
+/* Styles each individual service */
+.service-card {
+    flex: 1;
+    min-width: 250px;
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+}
+
+
+/* Adds a hover effect to services */
+.service-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ================= BUTTONS ================= */
+
+/* Styles the buttons */
+button {
+    background-color: #1E88E5;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+/* Button hover effect */
+button:hover {
+    background-color: #1565C0;
+}
+
+
+/* Button focus effect */
+button:focus {
+    outline: 2px solid #1E88E5;
+}
+
+
+/* ================= LINKS ================= */
+
+/* Styles normal links */
+main a {
+    color: #1E88E5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Changes links when the mouse
+   is placed over them */
+main a:hover {
+    text-decoration: underline;
+}
+
+
+/* ================= FORMS ================= */
+
+/* Controls the enquiry form */
+form {
+    max-width: 700px;
+    margin: 1rem auto;
+}
+
+
+/* Styles the form labels */
+label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+
+/* Styles the input boxes and text area */
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 0.7rem;
+    margin-top: 0.3rem;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 1rem;
+}
+
+
+/* Changes the form field when
+   the user clicks inside it */
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #1E88E5;
+    outline: none;
+}
+
+
+/* Gives the form button some space */
+form button {
+    margin-top: 1rem;
+}
+
+
+/* ================= CONTACT INFORMATION ================= */
+
+/* Styles each contact information line */
+.contact-info {
+    margin: 20px 0;
+    font-size: 1rem;
+}
+
+
+/* Styles the contact icons */
+.contact-info i {
+    color: #1E88E5;
+    font-size: 22px;
+    width: 30px;
+    margin-right: 10px;
+}
+
+
+/* Styles the contact links */
+.contact-info a {
+    color: #1E88E5;
+    text-decoration: none;
+}
+
+
+/* Changes contact links when
+   the mouse is over them */
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+
+/*FOOTER*/
+
+/* Styles the bottom of every page */
+footer {
+    background-color: #1E88E5;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+
+/*TABLET RESPONSIVE DESIGN*/
+
+/* These styles apply when the screen
+   is 900px or smaller */
+@media screen and (max-width: 900px) {
+
+    /* Reduces the main heading size */
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Allows navigation to wrap */
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    /* Makes sections slightly smaller */
+    section {
+        padding: 1.5rem;
+    }
+
+    /* Changes products from three columns
+       to two columns on tablets */
+    .products-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Changes services to a vertical layout
+       on tablets */
+    .services-container {
+        flex-direction: column;
+    }
+
+}
+
+
+/*MOBILE RESPONSIVE DESIGN*/
+
+/* These styles apply to mobile phones */
+@media screen and (max-width: 600px) {
+
+    /* Makes the navigation vertical */
+    nav ul {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+
+    /* Makes navigation links easier
+       to click on a phone */
+    nav a {
+        width: 100%;
+        padding: 0.7rem;
+    }
+
+
+    /* Makes the main content wider
+       on small screens */
+    main {
+        width: 95%;
+        margin: 1rem auto;
+    }
+
+
+    /* Makes the main heading smaller */
+    h1 {
+        font-size: 1.6rem;
+    }
+
+
+    /* Makes page headings smaller */
+    h2 {
+        font-size: 1.5rem;
+    }
+
+
+    /* Makes section headings smaller */
+    h3 {
+        font-size: 1.2rem;
+    }
+
+
+    /* Reduces section spacing */
+    section {
+        padding: 1rem;
+    }
+
+
+    /* Changes products to one column
+       on mobile phones */
+    .products-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Makes service cards full width */
+    .service-card {
+        width: 100%;
+    }
+
+
+    /* Makes images fit the phone screen */
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* Makes the Home background
+       fit smaller screens */
+    .home-main {
+        padding: 1rem;
+        background-position: center;
+    }
+
+
+    /* Makes form fields fit the screen */
+    input,
+    textarea,
+    select {
+        width: 100%;
+    }
+
+}
