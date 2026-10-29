@@ -30,55 +30,65 @@ if (yearElement) {
 }
 
 
-/* ================= ENQUIRY FORM ================= */
+// ================= ENQUIRY FORM SUBMISSION =================
 
-/*
-   Gets the enquiry form from the HTML page.
-*/
 const enquiryForm = document.getElementById("enquiryForm");
+const enquiryResponse = document.getElementById("enquiryResponse");
 
+if (enquiryForm && enquiryResponse) {
 
-if (enquiryForm) {
-
-    enquiryForm.addEventListener("submit", function(event) {
+    enquiryForm.addEventListener("submit", async function (event) {
 
         event.preventDefault();
 
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const phone = document.getElementById("phone").value.trim();
-        const enquiryType = document.getElementById("enquiryType").value;
-        const message = document.getElementById("message").value.trim();
+        enquiryResponse.textContent = "Sending your enquiry...";
 
-        const response = document.getElementById("enquiryResponse");
+        const submitButton = enquiryForm.querySelector(
+            'button[type="submit"]'
+        );
 
-        if (!enquiryForm.checkValidity()) {
+        submitButton.disabled = true;
 
-            enquiryForm.reportValidity();
-            return;
+        try {
+
+            const formData = new FormData(enquiryForm);
+
+            const response = await fetch(enquiryForm.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    "Accept": "application/json"
+                }
+            });
+
+            if (response.ok) {
+
+                enquiryResponse.textContent =
+                    "Thank you! Your enquiry has been sent successfully.";
+
+                enquiryForm.reset();
+
+            } else {
+
+                enquiryResponse.textContent =
+                    "Sorry, your enquiry could not be sent. Please try again.";
+
+            }
+
+        } catch (error) {
+
+            enquiryResponse.textContent =
+                "A connection error occurred. Please check your internet connection and try again.";
+
+        } finally {
+
+            submitButton.disabled = false;
 
         }
-
-        if (name === "" || email === "" || phone === "" ||
-            enquiryType === "" || message.length < 10) {
-
-            response.textContent =
-                "Please complete all fields correctly. Your message must contain at least 10 characters.";
-
-            return;
-
-        }
-
-        response.textContent =
-            "Thank you, " + name +
-            "! Your enquiry has been checked successfully. Please contact us directly by email or WhatsApp to ensure your enquiry reaches our business.";
-
-        enquiryForm.reset();
 
     });
 
 }
-
 
 /* ================= CONTACT FORM ================= */
 
