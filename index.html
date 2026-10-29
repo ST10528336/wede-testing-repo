@@ -3,14 +3,20 @@
 
 <head>
 
-    <!-- Page title displayed on the browser tab -->
-    <title>Uncle's Wife Cleaning Detergents - Home</title>
+    <!-- Sets the character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Page title displayed on the browser tab and used by search engines -->
+    <title>Home | Uncle's Wife Cleaning Detergents</title>
 
     <!-- Makes the website responsive on different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Description used by search engines -->
+    <meta name="description" content="Discover quality dishwashing liquid, bleach and household cleaning detergents from Uncle's Wife Cleaning Detergents in Duduza, South Africa.">
+
     <!-- Links the HTML page to the external CSS file -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <!-- Loads Poppins and Open Sans fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,16 +29,20 @@
 
     <!-- ================= WEBSITE HEADER ================= -->
     <header>
-       <!-- Business logo -->
-       <img src="images/logo.png" alt="Uncle's Wife Cleaning Detergents Logo" class="logo">
+
+        <!-- Business logo; the path points to the images folder outside js -->
+        <img src="../images/logo.png"
+             alt="Uncle's Wife Cleaning Detergents business logo"
+             class="logo">
+
         <!-- Website navigation menu -->
-        <nav>
+        <nav aria-label="Main navigation">
 
             <ul>
 
                 <!-- Home page link -->
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="index.html" aria-current="page">Home</a>
                 </li>
 
                 <!-- About Us page link -->
@@ -66,16 +76,14 @@
 
     </header>
 
-
     <!-- ================= MAIN CONTENT ================= -->
-
     <!-- The home-main class gives this page its own background image -->
     <main class="home-main">
-
         <!-- Hero section of the homepage -->
         <section id="hero-section">
 
-            <h2>Welcome to Uncle's Wife Cleaning Detergents</h2>
+            <!-- Main heading describing the business -->
+            <h1>Welcome to Uncle's Wife Cleaning Detergents</h1>
 
             <p>
                 Affordable, high-quality cleaning detergents
@@ -83,15 +91,13 @@
             </p>
 
             <!-- JavaScript button -->
-            <button onclick="showMessage()">
+            <button type="button" onclick="showMessage()">
                 Learn More
             </button>
 
         </section>
 
-
         <!-- ================= PRODUCTS INTRODUCTION ================= -->
-
         <section class="content-section">
 
             <h2>Our Products</h2>
@@ -101,14 +107,12 @@
                 in homes and workplaces.
             </p>
 
-            <!-- Link to the Products page -->
+            <!-- Internal link to the Products page -->
             <a href="products.html">View Products</a>
 
         </section>
 
-
         <!-- ================= PROMOTIONS SECTION ================= -->
-
         <section class="content-section">
 
             <h2>Promotions</h2>
@@ -121,17 +125,17 @@
 
     </main>
 
-
-    <!--FOOTER-->
-
+    <!-- ================= WEBSITE FOOTER ================= -->
     <footer>
 
-        <p>© 2026 Uncle's Wife Cleaning Detergents</p>
+        <p>
+            &copy; <span id="year">2026</span>
+            Uncle's Wife Cleaning Detergents. All rights reserved.
+        </p>
 
     </footer>
 
-
-    <!-- Links the page to the JavaScript file -->
+    <!-- Links the page to the JavaScript file in the same js folder -->
     <script src="script.js"></script>
 
 </body>

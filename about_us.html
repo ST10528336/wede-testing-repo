@@ -3,14 +3,20 @@
 
 <head>
 
-    <!-- Page title -->
-    <title>About Us - Uncle's Wife Cleaning Detergents</title>
+    <!-- Sets the character encoding -->
+    <meta charset="UTF-8">
 
-    <!-- Makes the website responsive -->
+    <!-- Page title displayed on the browser tab and used by search engines -->
+    <title>About Us | Uncle's Wife Cleaning Detergents</title>
+
+    <!-- Makes the website responsive on different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Links to the external CSS stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Description used by search engines -->
+    <meta name="description" content="Learn about Uncle's Wife Cleaning Detergents, a family business founded in 2024 by Mpho Mofokeng, supplying affordable cleaning products to homes and workplaces in Duduza, South Africa.">
+
+    <!-- Links the HTML page to the external CSS file -->
+    <link rel="stylesheet" href="../css/style.css">
 
     <!-- Loads Poppins and Open Sans fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,42 +28,44 @@
 <body>
 
     <!-- ================= WEBSITE HEADER ================= -->
-
     <header>
-         <!-- Business logo -->
-         <img src="images/logo.png" alt="Uncle's Wife Cleaning Detergents Logo" class="logo">
 
-        <!-- Website navigation -->
-        <nav>
+        <!-- Business logo; the images folder is outside the js folder -->
+        <img src="../images/logo.png"
+             alt="Uncle's Wife Cleaning Detergents business logo"
+             class="logo">
+
+        <!-- Website navigation menu -->
+        <nav aria-label="Main navigation">
 
             <ul>
 
-                <!-- Home page -->
+                <!-- Home page link -->
                 <li>
                     <a href="index.html">Home</a>
                 </li>
 
-                <!-- About Us page -->
+                <!-- About Us page link -->
                 <li>
-                    <a href="about_us.html">About Us</a>
+                    <a href="about_us.html" aria-current="page">About Us</a>
                 </li>
 
-                <!-- Contact page -->
+                <!-- Contact page link -->
                 <li>
                     <a href="contact.html">Our Contacts</a>
                 </li>
 
-                <!-- Enquiries page -->
+                <!-- Enquiries page link -->
                 <li>
                     <a href="enquiry.html">Enquiries</a>
                 </li>
 
-                <!-- Products page -->
+                <!-- Products page link -->
                 <li>
                     <a href="products.html">Products</a>
                 </li>
 
-                <!-- Services page -->
+                <!-- Services page link -->
                 <li>
                     <a href="services.html">Services</a>
                 </li>
@@ -68,17 +76,16 @@
 
     </header>
 
-
     <!-- ================= MAIN CONTENT ================= -->
-
     <main>
 
-        <h2>About Us</h2>
+        <!-- Main heading describing this page -->
+        <h1>About Us</h1>
 
         <!-- Brief history section -->
         <section class="content-section">
 
-            <h3>Brief History</h3>
+            <h2>Brief History</h2>
 
             <p>
                 This is a family business that was found in 2024
@@ -102,11 +109,10 @@
 
         </section>
 
-
         <!-- Mission section -->
         <section class="content-section">
 
-            <h3>Mission</h3>
+            <h2>Mission</h2>
 
             <p>
                 The mission for the business is to sell affordable,
@@ -118,11 +124,10 @@
 
         </section>
 
-
         <!-- Vision section -->
         <section class="content-section">
 
-            <h3>Vision</h3>
+            <h2>Vision</h2>
 
             <p>
                 The vision is to see the business growing to be
@@ -134,29 +139,29 @@
 
         </section>
 
-
         <!-- Image section -->
         <section class="image-section">
 
-            <img src="images/a_person_washing_dishes.jpg"
-                 alt="A person washing dishes"
+            <!-- Descriptive alternative text improves image accessibility -->
+            <img src="../images/a_person_washing_dishes.jpg"
+                 alt="A person washing dishes as part of everyday household cleaning"
                  class="website-image">
 
         </section>
 
     </main>
 
-
-    <!-- ================= FOOTER ================= -->
-
+    <!-- ================= WEBSITE FOOTER ================= -->
     <footer>
 
-        <p>© 2026 Uncle's Wife Cleaning Detergents</p>
+        <p>
+            &copy; <span id="year">2026</span>
+            Uncle's Wife Cleaning Detergents. All rights reserved.
+        </p>
 
     </footer>
 
-
-    <!-- Links to JavaScript -->
+    <!-- Links to the JavaScript file in the same js folder -->
     <script src="script.js"></script>
 
 </body>

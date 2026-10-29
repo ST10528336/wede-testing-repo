@@ -1,55 +1,37 @@
-/* ========================================
-   UNCLE'S WIFE CLEANING DETERGENTS
-   MAIN STYLE SHEET
-   ======================================== */
+/* =========================
+   GENERAL STYLES
+========================= */
 
-
-/* ================= BASIC WEBSITE SETTINGS ================= */
-
-/* Removes the default margin and padding
-   added by the browser */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-/* Basic styling for the whole website */
 body {
-    font-family: "Open Sans", Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
     line-height: 1.6;
-    color: #333333;
+    color: #333;
     background-color: #F5F5F5;
 }
 
-
-/* ================= HEADINGS ================= */
-
-/* Uses Poppins for the headings */
 h1,
 h2,
 h3 {
-    font-family: "Poppins", Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-
-/* Main website heading */
 h1 {
     font-size: 2rem;
 }
 
-
-/* Page headings */
 h2 {
     color: #1E88E5;
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
-
-/* Smaller section headings */
 h3 {
     color: #1E88E5;
     font-size: 1.3rem;
@@ -57,9 +39,10 @@ h3 {
 }
 
 
-/* ================= HEADER ================= */
+/* =========================
+   HEADER AND NAVIGATION
+========================= */
 
-/* Styles the top part of the website */
 header {
     background-color: #1E88E5;
     color: #FFFFFF;
@@ -67,199 +50,173 @@ header {
     text-align: center;
 }
 
-
-/* Makes the website name white */
-header h1 {
-    color: #FFFFFF;
-    margin-bottom: 1rem;
-}
-/* BUSINESS LOGO */
 .logo {
     width: 180px;
     height: auto;
-    margin: 0 auto 1rem auto;
     display: block;
-    border-radius: 0;
+    margin: 0 auto;
 }
 
-/*NAVIGATION*/
-
-/* Removes bullet points and creates
-   a flexible navigation menu */
 nav ul {
-    list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
     flex-wrap: wrap;
+    list-style: none;
+    margin-top: 1rem;
 }
 
-
-/* Navigation links */
 nav a {
+    display: block;
     color: #FFFFFF;
     text-decoration: none;
-    padding: 0.6rem 1rem;
-    display: block;
+    padding: 0.7rem 1rem;
     border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
-/* Changes navigation link when
-   the mouse is over it */
-nav a:hover {
+nav a:hover,
+nav a[aria-current="page"] {
     background-color: #FFFFFF;
     color: #1E88E5;
 }
 
 
-/* Changes navigation link when
-   it is clicked */
-nav a:active {
-    background-color: #F5F5F5;
-    color: #1E88E5;
-}
+/* =========================
+   MAIN CONTENT
+========================= */
 
-
-/*MAIN CONTENT*/
-
-/* Controls the size and position
-   of the main content */
 main {
     width: 90%;
     max-width: 1200px;
     margin: 2rem auto;
 }
 
-
-/*SECTIONS*/
-
-/* Gives normal sections a clean
-   white background */
 section {
     background-color: #FFFFFF;
     padding: 2rem;
     margin-bottom: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+p {
+    margin-bottom: 1rem;
 }
 
 
-/*HOME PAGE*/
+/* =========================
+   HOME PAGE
+========================= */
+.home-main section {
+    background-color: rgba(255, 255, 255, 0.85);
+}
 
-/* Adds the cleaning picture as the
-   background of the Home page only */
 .home-main {
+    padding: 2rem;
     background-image: url("../images/people_cleaning.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 2rem;
-    border-radius: 8px;
 }
 
 
-/* Makes the Home page sections
-   easier to read over the background */
-.home-main #hero-section,
-.home-main .content-section {
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-
-/* Centres the hero section */
-#hero-section {
+.hero {
     text-align: center;
 }
 
+.hero h1 {
+    margin-bottom: 1rem;
+}
 
-/* Styles the Learn More button
-   inside the hero section */
-#hero-section button {
-    margin-top: 1rem;
+.hero p {
+    margin-bottom: 1.5rem;
+}
+
+.home-image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 8px;
+}
+
+.home-main a {
+    color: #1E88E5;
+    font-weight: bold;
 }
 
 
-/*IMAGES*/
+/* =========================
+   IMAGES
+========================= */
 
-/* Makes all images responsive */
 img {
     max-width: 100%;
     height: auto;
+}
+
+.website-image {
     display: block;
-    margin: 1rem auto;
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem auto;
     border-radius: 8px;
 }
 
 
-/* Styles normal website images */
-.website-image {
-    width: 400px;
-    max-width: 100%;
-    height: auto;
-}
+/* =========================
+   PRODUCTS PAGE
+========================= */
 
-
-/* ================= PRODUCTS ================= */
-
-/* Creates a three-column Grid
-   for the products */
 .products-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
-
-    /* Removes the normal section styling
-       from the product container */
-    background-color: transparent;
-    padding: 0;
-    box-shadow: none;
 }
 
-
-/* Styles each individual product */
 .product-card {
     background-color: #FFFFFF;
     padding: 1.5rem;
     border: 1px solid #DDDDDD;
     border-radius: 8px;
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-
-/* Product images */
-.product-image {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-}
-
-
-/* Adds an effect when the user
-   moves the mouse over a product */
 .product-card:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 250px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    margin-bottom: 0.5rem;
 }
 
 
-/* ================= SERVICES ================= */
+/* =========================
+   SERVICES PAGE
+========================= */
 
-/* Creates a flexible layout
-   for the services */
 .services-container {
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
-
-    /* Removes the normal section styling
-       from the services container */
-    background-color: transparent;
-    padding: 0;
+    background: transparent;
     box-shadow: none;
+    padding: 0;
 }
 
-
-/* Styles each individual service */
 .service-card {
     flex: 1;
     min-width: 250px;
@@ -267,140 +224,140 @@ img {
     padding: 1.5rem;
     border: 1px solid #DDDDDD;
     border-radius: 8px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-
-/* Adds a hover effect to services */
 .service-card:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
 }
 
 
-/* ================= BUTTONS ================= */
+/* =========================
+   SERVICE SEARCH
+========================= */
 
-/* Styles the buttons */
-button {
+.service-search {
+    margin-bottom: 1.5rem;
+}
+
+.service-search label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.service-search input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    font: inherit;
+}
+
+#serviceSearchMessage {
+    margin-top: 0.5rem;
+    color: #555555;
+}
+
+
+/* =========================
+   BUTTONS AND LINKS
+========================= */
+
+button,
+.button {
+    display: inline-block;
     background-color: #1E88E5;
     color: #FFFFFF;
+    padding: 0.8rem 1.2rem;
     border: none;
-    padding: 0.7rem 1.2rem;
     border-radius: 5px;
+    text-decoration: none;
+    font: inherit;
     cursor: pointer;
-    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
-
-/* Button hover effect */
-button:hover {
+button:hover,
+.button:hover {
     background-color: #1565C0;
 }
 
-
-/* Button focus effect */
-button:focus {
-    outline: 2px solid #1E88E5;
-}
-
-
-/* ================= LINKS ================= */
-
-/* Styles normal links */
-main a {
+a {
     color: #1E88E5;
-    text-decoration: none;
-    font-weight: bold;
+}
+
+a:hover {
+    color: #1565C0;
 }
 
 
-/* Changes links when the mouse
-   is placed over them */
-main a:hover {
-    text-decoration: underline;
-}
+/* =========================
+   FORMS
+========================= */
 
-
-/* ================= FORMS ================= */
-
-/* Controls the enquiry form */
 form {
     max-width: 700px;
-    margin: 1rem auto;
+    margin: 0 auto;
 }
 
-
-/* Styles the form labels */
 label {
     display: block;
-    margin-top: 1rem;
+    margin-bottom: 0.4rem;
     font-weight: bold;
 }
 
-
-/* Styles the input boxes and text area */
 input,
 textarea,
 select {
     width: 100%;
-    padding: 0.7rem;
-    margin-top: 0.3rem;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
     border: 1px solid #CCCCCC;
     border-radius: 5px;
-    font-family: "Open Sans", Arial, sans-serif;
-    font-size: 1rem;
+    font: inherit;
 }
 
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
 
-/* Changes the form field when
-   the user clicks inside it */
 input:focus,
 textarea:focus,
 select:focus {
-    border-color: #1E88E5;
-    outline: none;
+    outline: 2px solid #1E88E5;
+    outline-offset: 2px;
 }
 
-
-/* Gives the form button some space */
-form button {
+.form-message {
     margin-top: 1rem;
+    font-weight: bold;
 }
 
 
-/* ================= CONTACT INFORMATION ================= */
+/* =========================
+   CONTACT INFORMATION
+========================= */
 
-/* Styles each contact information line */
 .contact-info {
-    margin: 20px 0;
-    font-size: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-
-/* Styles the contact icons */
-.contact-info i {
-    color: #1E88E5;
-    font-size: 22px;
-    width: 30px;
-    margin-right: 10px;
+.contact-info p {
+    margin-bottom: 0.7rem;
 }
 
-
-/* Styles the contact links */
 .contact-info a {
-    color: #1E88E5;
-    text-decoration: none;
+    overflow-wrap: anywhere;
 }
 
 
-/* Changes contact links when
-   the mouse is over them */
-.contact-info a:hover {
-    text-decoration: underline;
-}
+/* =========================
+   FOOTER
+========================= */
 
-
-/*FOOTER*/
-
-/* Styles the bottom of every page */
 footer {
     background-color: #1E88E5;
     color: #FFFFFF;
@@ -409,128 +366,596 @@ footer {
     margin-top: 2rem;
 }
 
+footer p {
+    margin-bottom: 0;
+}
 
-/*TABLET RESPONSIVE DESIGN*/
 
-/* These styles apply when the screen
-   is 900px or smaller */
+/* =========================
+   TABLET RESPONSIVE STYLES
+========================= */
+
 @media screen and (max-width: 900px) {
-
-    /* Reduces the main heading size */
     h1 {
         font-size: 1.8rem;
     }
 
-    /* Allows navigation to wrap */
     nav ul {
         flex-wrap: wrap;
     }
 
-    /* Makes sections slightly smaller */
     section {
         padding: 1.5rem;
     }
 
-    /* Changes products from three columns
-       to two columns on tablets */
     .products-container {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Changes services to a vertical layout
-       on tablets */
     .services-container {
         flex-direction: column;
     }
 
+    .service-card {
+        width: 100%;
+    }
 }
 
 
-/*MOBILE RESPONSIVE DESIGN*/
+/* =========================
+   MOBILE RESPONSIVE STYLES
+========================= */
 
-/* These styles apply to mobile phones */
 @media screen and (max-width: 600px) {
-
-    /* Makes the navigation vertical */
     nav ul {
         flex-direction: column;
         gap: 0.2rem;
     }
 
-
-    /* Makes navigation links easier
-       to click on a phone */
     nav a {
         width: 100%;
         padding: 0.7rem;
     }
 
-
-    /* Makes the main content wider
-       on small screens */
     main {
         width: 95%;
         margin: 1rem auto;
     }
 
-
-    /* Makes the main heading smaller */
     h1 {
         font-size: 1.6rem;
     }
 
-
-    /* Makes page headings smaller */
     h2 {
         font-size: 1.5rem;
     }
 
-
-    /* Makes section headings smaller */
     h3 {
         font-size: 1.2rem;
     }
 
-
-    /* Reduces section spacing */
     section {
         padding: 1rem;
     }
 
-
-    /* Changes products to one column
-       on mobile phones */
     .products-container {
         grid-template-columns: 1fr;
     }
 
-
-    /* Makes service cards full width */
     .service-card {
         width: 100%;
     }
 
-
-    /* Makes images fit the phone screen */
     img {
-        width: 100%;
+        max-width: 100%;
         height: auto;
     }
 
-
-    /* Makes the Home background
-       fit smaller screens */
     .home-main {
         padding: 1rem;
         background-position: center;
     }
 
-
-    /* Makes form fields fit the screen */
     input,
     textarea,
     select {
         width: 100%;
     }
-
 }
+
+/* =========================
+   FAQ SECTION - BLUE THEME
+========================= */
+
+.faq-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 35px 25px;
+    background: #FFFFFF;
+    border: 1px solid #DCE5EF;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(30, 136, 229, 0.07);
+}
+
+.faq-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.faq-heading h2 {
+    color: #1E88E5;
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    margin: 0 0 12px;
+}
+
+.faq-heading p {
+    color: #5F6B7A;
+    line-height: 1.7;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.faq-decoration,
+.faq-emoji,
+.faq-footer-message > span {
+    display: none !important;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-item {
+    background: #FFFFFF;
+    border: 1px solid #DCE5EF;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(30, 136, 229, 0.04);
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.faq-item:hover {
+    border-color: #90BFEF;
+    box-shadow: 0 4px 12px rgba(30, 136, 229, 0.08);
+}
+
+.faq-item summary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 20px;
+    cursor: pointer;
+    list-style: none;
+    color: #263648;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::marker {
+    content: "";
+}
+
+.faq-arrow {
+    margin-left: auto;
+    padding-left: 12px;
+    color: #1E88E5;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+.faq-item[open] .faq-arrow {
+    transform: rotate(180deg);
+}
+
+.faq-item[open] {
+    border-color: #90BFEF;
+}
+
+.faq-item[open] summary {
+    color: #1E88E5;
+    background: #F5F9FE;
+}
+
+.faq-answer {
+    padding: 16px 20px 20px;
+    color: #526174;
+    line-height: 1.8;
+    border-top: 1px solid #E8EEF5;
+}
+
+.faq-answer p {
+    margin: 0 0 12px;
+}
+
+.faq-link {
+    display: inline-block;
+    color: #1E88E5;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 3px;
+}
+
+.faq-link:hover {
+    color: #1565C0;
+    text-decoration: underline;
+}
+
+.faq-item summary:focus-visible,
+.faq-link:focus-visible,
+.faq-contact-button:focus-visible {
+    outline: 3px solid #1E88E5;
+    outline-offset: 3px;
+}
+
+.faq-footer-message {
+    margin-top: 25px;
+    padding: 24px 18px;
+    text-align: center;
+    background: #F5F9FE;
+    border: 1px solid #DCE8F5;
+    border-radius: 12px;
+}
+
+.faq-footer-message p {
+    color: #526174;
+    margin: 0 0 15px;
+}
+
+.faq-contact-button {
+    display: inline-block;
+    padding: 11px 22px;
+    background: #1E88E5;
+    color: #FFFFFF;
+    border: 1px solid #1E88E5;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.faq-contact-button:hover {
+    background: #1565C0;
+    border-color: #1565C0;
+    color: #FFFFFF;
+}
+
+
+/* MOBILE FAQ STYLES */
+
+@media screen and (max-width: 600px) {
+    .faq-section {
+        margin: 30px auto;
+        padding: 24px 14px;
+        border-radius: 12px;
+    }
+
+    .faq-heading h2 {
+        font-size: 23px;
+    }
+
+    .faq-heading p {
+        font-size: 14px;
+    }
+
+    .faq-item summary {
+        gap: 8px;
+        padding: 15px 12px;
+        font-size: 14px;
+    }
+
+    .faq-arrow {
+        font-size: 22px;
+        padding-left: 5px;
+    }
+
+    .faq-answer {
+        padding: 14px 12px 17px;
+        font-size: 14px;
+    }
+
+    .faq-footer-message {
+        padding: 20px 12px;
+    }
+}
+
+
+/* ACCESSIBILITY: REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+    .faq-item,
+    .faq-arrow,
+    .faq-contact-button {
+        transition: none;
+    }
+}
+
+/* =========================
+   BLUE FAQ STYLING
+========================= */
+
+.faq-heading h2 {
+    color: #1E88E5;
+}
+
+.faq-arrow {
+    color: #1E88E5;
+}
+
+.faq-item[open] summary {
+    color: #1E88E5;
+    background: #F5F9FE;
+}
+
+.faq-item[open] {
+    border-color: #90BFEF;
+}
+
+.faq-footer-message {
+    background: #F5F9FE;
+    border-color: #DCE8F5;
+}
+
+.faq-contact-button {
+    background: #1E88E5;
+    border-color: #1E88E5;
+    color: #FFFFFF;
+}
+
+.faq-contact-button:hover {
+    background: #1565C0;
+    border-color: #1565C0;
+    color: #FFFFFF;
+}
+
+/* =========================
+   SERVICES AND FAQ LAYOUT
+========================= */
+
+.services-faq-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: start;
+    gap: 24px;
+    margin-top: 25px;
+}
+
+.services-panel {
+    min-width: 0;
+    padding: 24px;
+    background: #FFFFFF;
+    border: 1px solid #DCE5EF;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(30, 136, 229, 0.06);
+}
+
+.services-panel > h2 {
+    color: #1E88E5;
+    margin-bottom: 20px;
+}
+
+.services-panel .services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.services-panel .service-card {
+    flex: initial;
+    width: 100%;
+    min-width: 0;
+    padding: 18px;
+    background: #FFFFFF;
+    border: 1px solid #DCE5EF;
+    border-radius: 9px;
+}
+
+.services-panel .service-card h3 {
+    color: #1E88E5;
+}
+
+.services-panel .service-card p {
+    margin-bottom: 0;
+    color: #526174;
+}
+
+.services-panel .service-search {
+    margin-bottom: 20px;
+}
+
+.services-panel .service-search input {
+    margin-bottom: 8px;
+}
+
+/* FAQ PANEL */
+
+.services-faq-layout .faq-section {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+    padding: 24px 18px;
+    background: #FFFFFF;
+    border: 1px solid #DCE5EF;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(30, 136, 229, 0.06);
+}
+
+.services-faq-layout .faq-heading {
+    margin-bottom: 20px;
+}
+
+.services-faq-layout .faq-heading h2 {
+    font-size: 23px;
+    color: #1E88E5;
+}
+
+.services-faq-layout .faq-heading p {
+    font-size: 14px;
+}
+
+.services-faq-layout .faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.services-faq-layout .faq-item {
+    border: 1px solid #DCE5EF;
+    border-radius: 8px;
+    box-shadow: none;
+}
+
+.services-faq-layout .faq-item summary {
+    gap: 8px;
+    padding: 14px 12px;
+    font-size: 14px;
+}
+
+.services-faq-layout .faq-item[open] summary {
+    background: #F5F9FE;
+    color: #1E88E5;
+}
+
+.services-faq-layout .faq-item[open] {
+    border-color: #90BFEF;
+}
+
+.services-faq-layout .faq-arrow {
+    color: #1E88E5;
+    flex-shrink: 0;
+}
+
+.services-faq-layout .faq-answer {
+    padding: 12px;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.services-faq-layout .faq-link {
+    color: #1E88E5;
+}
+
+.services-faq-layout .faq-footer-message {
+    margin-top: 18px;
+    padding: 18px 12px;
+    background: #F5F9FE;
+    border: 1px solid #DCE8F5;
+}
+
+.services-faq-layout .faq-contact-button {
+    background: #1E88E5;
+    border-color: #1E88E5;
+    color: #FFFFFF;
+}
+
+.services-faq-layout .faq-contact-button:hover {
+    background: #1565C0;
+    border-color: #1565C0;
+}
+
+/* TABLETS AND SMALLER SCREENS */
+
+@media screen and (max-width: 900px) {
+    .services-faq-layout {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .services-panel .services-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .services-faq-layout .faq-section {
+        padding: 25px 20px;
+    }
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 600px) {
+    .services-panel {
+        padding: 18px 14px;
+    }
+
+    .services-panel .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .services-faq-layout .faq-section {
+        padding: 22px 14px;
+    }
+
+    .services-faq-layout .faq-heading h2 {
+        font-size: 21px;
+    }
+}
+/* Contact page layout */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.contact-details,
+.contact-form-section {
+    min-width: 0;
+}
+
+/* Map directly below the location details */
+.contact-map {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.contact-map iframe {
+    display: block;
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* Contact form fields */
+.contact-form-section .enquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form-section .enquiry-form input,
+.contact-form-section .enquiry-form select,
+.contact-form-section .enquiry-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-map iframe {
+        height: 280px;
+    }
+}
+

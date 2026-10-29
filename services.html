@@ -1,142 +1,240 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-    <!-- Page title -->
-    <title>Services - Uncle's Wife Cleaning Detergents</title>
-
-    <!-- Makes the website responsive -->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Links to the external CSS stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+    <title>Cleaning Services | Uncle's Wife Cleaning Detergents</title>
 
-    <!-- Loads Poppins and Open Sans fonts -->
+    <meta name="description" content="Learn about delivery options, delivery fees and customer support at Uncle's Wife Cleaning Detergents in Duduza, South Africa.">
+
+    <link rel="stylesheet" href="../css/style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- ================= WEBSITE HEADER ================= -->
-
     <header>
-          <!-- Business logo -->
-         <img src="images/logo.png" alt="Uncle's Wife Cleaning Detergents Logo" class="logo">
+        <img src="../images/logo.png"
+             alt="Uncle's Wife Cleaning Detergents business logo"
+             class="logo">
 
-        <!-- Website navigation -->
-        <nav>
-
+        <nav aria-label="Main navigation">
             <ul>
-
-                <!-- Home page -->
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-
-                <!-- About Us page -->
-                <li>
-                    <a href="about_us.html">About Us</a>
-                </li>
-
-                <!-- Contact page -->
-                <li>
-                    <a href="contact.html">Our Contacts</a>
-                </li>
-
-                <!-- Enquiries page -->
-                <li>
-                    <a href="enquiry.html">Enquiries</a>
-                </li>
-
-                <!-- Products page -->
-                <li>
-                    <a href="products.html">Products</a>
-                </li>
-
-                <!-- Services page -->
-                <li>
-                    <a href="services.html">Services</a>
-                </li>
-
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="contact.html">Our Contacts</a></li>
+                <li><a href="enquiry.html">Enquiries</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html" aria-current="page">Services</a></li>
             </ul>
-
         </nav>
-
     </header>
-
-
-    <!-- ================= MAIN CONTENT ================= -->
 
     <main>
 
-        <h2>Our Services</h2>
+        <h1>Our Services</h1>
 
+        <p>
+            Learn more about our services and find answers to
+            common questions about our products and deliveries.
+        </p>
 
-        <!-- Services container using Flexbox -->
-        <section class="services-container">
+        <!-- SERVICES AND FAQ SIDE-BY-SIDE LAYOUT -->
+        <div class="services-faq-layout">
 
+            <!-- LEFT SIDE: SERVICES -->
+            <div class="services-panel">
 
-            <!-- ================= DELIVERY SERVICE ================= -->
+                <h2>Our Services</h2>
 
-            <article class="service-card">
+                <div class="service-search">
+                    <label for="serviceSearch">Search our services</label>
 
-                <h3>Deliveries</h3>
+                    <input
+                        type="search"
+                        id="serviceSearch"
+                        placeholder="Search services..."
+                        aria-describedby="serviceSearchMessage"
+                    >
 
-                <p>
-                    We offer delivery services to our customers.
-                </p>
+                    <p id="serviceSearchMessage" aria-live="polite">
+                        Showing all 3 services.
+                    </p>
+                </div>
 
-            </article>
+                <div class="services-container" id="servicesContainer">
 
+                    <article class="service-card">
+                        <h3>Deliveries</h3>
+                        <p>
+                            We offer delivery services to our customers.
+                            Please contact us to confirm availability
+                            for your location.
+                        </p>
+                    </article>
 
-            <!-- ================= DELIVERY FEES ================= -->
+                    <article class="service-card">
+                        <h3>Delivery Fees</h3>
+                        <p>
+                            Delivery fees depend on the delivery
+                            location and order. Contact us to confirm
+                            the cost before ordering.
+                        </p>
+                    </article>
 
-            <article class="service-card">
+                    <article class="service-card">
+                        <h3>Customer Support</h3>
+                        <p>
+                            Contact us if you have questions about
+                            our products, prices, deliveries or orders.
+                        </p>
+                    </article>
 
-                <h3>Delivery Fees</h3>
+                </div>
 
-                <p>
-                    Delivery fees will depend on the delivery
-                    location and order.
-                </p>
+            </div>
 
-            </article>
+            <!-- RIGHT SIDE: ALL SIX FAQs -->
+            <section class="faq-section" aria-labelledby="faq-title">
 
+                <div class="faq-heading">
+                    <h2 id="faq-title">Frequently Asked Questions 💙</h2>
+                    <p>
+                        Find quick answers to common questions.
+                    </p>
+                </div>
 
-            <!-- ================= CUSTOMER SUPPORT ================= -->
+                <div class="faq-container">
 
-            <article class="service-card">
+                    <details class="faq-item">
+                        <summary>
+                            <span>What cleaning products do you sell?</span>
+                            <span class="faq-arrow" aria-hidden="true">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>
+                                We offer dishwashing liquid, bleach,
+                                pine gel, fabric softener and household pine.
+                            </p>
+                            <a href="products.html" class="faq-link">
+                                View our products
+                            </a>
+                        </div>
+                    </details>
 
-                <h3>Customer Support</h3>
+                    <details class="faq-item">
+                        <summary>
+                            <span>How can I place an order?</span>
+                            <span class="faq-arrow" aria-hidden="true">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>
+                                Contact us through WhatsApp, email
+                                or our online enquiry form to discuss
+                                your order.
+                            </p>
+                            <a href="enquiry.html" class="faq-link">
+                                Send an enquiry
+                            </a>
+                        </div>
+                    </details>
 
-                <p>
-                    Customers can contact us if they have any
-                    questions or need assistance.
-                </p>
+                    <details class="faq-item">
+                        <summary>
+                            <span>Do you offer delivery services?</span>
+                            <span class="faq-arrow" aria-hidden="true">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>
+                                Contact us to confirm delivery
+                                availability for your location and
+                                discuss the arrangements.
+                            </p>
+                            <a href="contact.html" class="faq-link">
+                                Ask about delivery
+                            </a>
+                        </div>
+                    </details>
 
-            </article>
+                    <details class="faq-item">
+                        <summary>
+                            <span>How much are your delivery fees?</span>
+                            <span class="faq-arrow" aria-hidden="true">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>
+                                Delivery fees depend on your location
+                                and order. Contact us to confirm the cost.
+                            </p>
+                            <a href="contact.html" class="faq-link">
+                                Ask about delivery fees
+                            </a>
+                        </div>
+                    </details>
 
-        </section>
+                    <details class="faq-item">
+                        <summary>
+                            <span>How can I check product prices and sizes?</span>
+                            <span class="faq-arrow" aria-hidden="true">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>
+                                Contact us for information about
+                                available product sizes and current prices.
+                            </p>
+                            <a href="products.html" class="faq-link">
+                                View our products
+                            </a>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>
+                            <span>How can I contact your business?</span>
+                            <span class="faq-arrow" aria-hidden="true">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>
+                                You can reach us by phone, WhatsApp
+                                or email. Visit our Contact Us page
+                                for our contact details.
+                            </p>
+                            <a href="contact.html" class="faq-link">
+                                View contact details
+                            </a>
+                        </div>
+                    </details>
+
+                </div>
+
+                <div class="faq-footer-message">
+                    <p>Still have questions? We are happy to help. 💙</p>
+                    <a href="enquiry.html" class="faq-contact-button">
+                        Ask Us Anything 💙
+                    </a>
+                </div>
+
+            </section>
+
+        </div>
 
     </main>
 
-
-    <!-- ================= FOOTER ================= -->
-
     <footer>
-
-        <p>© 2026 Uncle's Wife Cleaning Detergents</p>
-
+        <p>
+            &copy; <span id="year">2026</span>
+            Uncle's Wife Cleaning Detergents. All rights reserved.
+        </p>
     </footer>
 
-
-    <!-- Links to JavaScript -->
     <script src="script.js"></script>
 
 </body>
-
 </html>

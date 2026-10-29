@@ -3,14 +3,20 @@
 
 <head>
 
-    <!-- Page title -->
-    <title>Enquiry - Uncle's Wife Cleaning Detergents</title>
+    <!-- Sets the character encoding -->
+    <meta charset="UTF-8">
 
-    <!-- Makes the website responsive -->
+    <!-- Page title displayed on the browser tab and used by search engines -->
+    <title>Enquiries | Uncle's Wife Cleaning Detergents</title>
+
+    <!-- Makes the website responsive on different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Links to the external CSS stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Description used by search engines -->
+    <meta name="description" content="Send an enquiry to Uncle's Wife Cleaning Detergents about dishwashing liquid, bleach and other household cleaning products in Duduza, South Africa.">
+
+    <!-- Links the HTML page to the external CSS file -->
+    <link rel="stylesheet" href="../css/style.css">
 
     <!-- Loads Poppins and Open Sans fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,42 +28,39 @@
 <body>
 
     <!-- ================= WEBSITE HEADER ================= -->
-
     <header>
-         <!-- Business logo -->
-        <img src="images/logo.png" alt="Uncle's Wife Cleaning Detergents Logo" class="logo">
 
-        <!-- Website navigation -->
-        <nav>
+        <!-- Business logo; the images folder is outside the js folder -->
+        <img src="../images/logo.png"
+             alt="Uncle's Wife Cleaning Detergents business logo"
+             class="logo">
+
+        <!-- Website navigation menu -->
+        <nav aria-label="Main navigation">
 
             <ul>
 
-                <!-- Home page -->
                 <li>
                     <a href="index.html">Home</a>
                 </li>
 
-                <!-- About Us page -->
                 <li>
                     <a href="about_us.html">About Us</a>
                 </li>
 
-                <!-- Contact page -->
                 <li>
                     <a href="contact.html">Our Contacts</a>
                 </li>
 
-                <!-- Enquiries page -->
+                <!-- Identifies the current page -->
                 <li>
-                    <a href="enquiry.html">Enquiries</a>
+                    <a href="enquiry.html" aria-current="page">Enquiries</a>
                 </li>
 
-                <!-- Products page -->
                 <li>
                     <a href="products.html">Products</a>
                 </li>
 
-                <!-- Services page -->
                 <li>
                     <a href="services.html">Services</a>
                 </li>
@@ -68,46 +71,87 @@
 
     </header>
 
-
     <!-- ================= MAIN CONTENT ================= -->
-
     <main>
 
-        <h2>Make an Enquiry</h2>
+        <!-- Main heading for the Enquiries page -->
+        <h1>Make an Enquiry</h1>
 
         <p>
-            Have a question about our business or products?
-            Please complete the form below.
+            Have a question about our business, cleaning products
+            or services? Please complete the form below and provide
+            the details of your enquiry.
         </p>
 
-
         <!-- ================= ENQUIRY FORM ================= -->
-
         <form id="enquiryForm" class="enquiry-form">
 
             <!-- Full name field -->
             <label for="name">Full Name:</label>
 
-            <input type="text" id="name">
-
+            <input
+                type="text"
+                id="name"
+                name="name"
+                autocomplete="name"
+                required
+            >
 
             <!-- Email field -->
             <label for="email">Email Address:</label>
 
-            <input type="email" id="email">
-
+            <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                required
+            >
 
             <!-- Phone number field -->
             <label for="phone">Phone Number:</label>
 
-            <input type="tel" id="phone">
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                autocomplete="tel"
+                pattern="[0-9+\s()-]{10,20}"
+                title="Enter a valid phone number using 10 to 20 characters."
+                required
+            >
 
+            <!-- Enquiry type -->
+            <label for="enquiryType">Enquiry Type:</label>
 
-            <!-- Enquiry message field -->
+            <select id="enquiryType" name="enquiryType" required>
+
+                <option value="">Select an enquiry type</option>
+
+                <option value="Products">Products</option>
+
+                <option value="Services">Services</option>
+
+                <option value="Volunteer or Sponsorship">
+                    Volunteer or Sponsorship
+                </option>
+
+                <option value="Other">Other</option>
+
+            </select>
+
+            <!-- Enquiry message -->
             <label for="message">Your Enquiry:</label>
 
-            <textarea id="message" rows="5"></textarea>
-
+            <textarea
+                id="message"
+                name="message"
+                rows="5"
+                minlength="10"
+                maxlength="1000"
+                placeholder="Please describe your enquiry..."
+                required
+            ></textarea>
 
             <!-- Submit button -->
             <button type="submit">
@@ -116,19 +160,24 @@
 
         </form>
 
+        <!-- Area where JavaScript displays the form response -->
+        <div id="enquiryResponse"
+             role="status"
+             aria-live="polite"></div>
+
     </main>
 
-
-    <!-- ================= FOOTER ================= -->
-
+    <!-- ================= WEBSITE FOOTER ================= -->
     <footer>
 
-        <p>© 2026 Uncle's Wife Cleaning Detergents</p>
+        <p>
+            &copy; <span id="year">2026</span>
+            Uncle's Wife Cleaning Detergents. All rights reserved.
+        </p>
 
     </footer>
 
-
-    <!-- Links to JavaScript -->
+    <!-- Links to script.js in the same js folder -->
     <script src="script.js"></script>
 
 </body>

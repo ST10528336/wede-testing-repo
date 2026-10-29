@@ -1,20 +1,29 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-    <!-- Page title -->
-    <title>Products - Uncle's Wife Cleaning Detergents</title>
+    <!-- Sets the character encoding for the webpage -->
+    <meta charset="UTF-8">
 
-    <!-- Makes the website responsive -->
+    <!-- Page title displayed in the browser tab and used by search engines -->
+    <title>Cleaning Products | Uncle's Wife Cleaning Detergents</title>
+
+    <!-- Makes the website responsive on different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Links to the external CSS stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Describes the products page to search engines -->
+    <meta name="description" content="Explore cleaning products from Uncle's Wife Cleaning Detergents, including dishwashing liquid, bleach, pine gel, fabric softener and household cleaning products in Duduza, South Africa.">
 
-    <!-- Loads Poppins and Open Sans fonts -->
+    <!-- Connects the page to the external CSS stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Connects to Google Fonts to improve the website typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Loads the Poppins and Open Sans fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
@@ -24,44 +33,22 @@
     <!-- ================= WEBSITE HEADER ================= -->
 
     <header>
-         <!-- Business logo -->
-         <img src="images/logo.png" alt="Uncle's Wife Cleaning Detergents Logo" class="logo">
 
-        <!-- Website navigation -->
-        <nav>
+        <!-- Business logo with descriptive alternative text -->
+        <img src="../images/logo.png"
+             alt="Uncle's Wife Cleaning Detergents business logo"
+             class="logo">
+
+        <!-- Website navigation links -->
+        <nav aria-label="Main navigation">
 
             <ul>
-
-                <!-- Home page -->
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-
-                <!-- About Us page -->
-                <li>
-                    <a href="about_us.html">About Us</a>
-                </li>
-
-                <!-- Contact page -->
-                <li>
-                    <a href="contact.html">Our Contacts</a>
-                </li>
-
-                <!-- Enquiries page -->
-                <li>
-                    <a href="enquiry.html">Enquiries</a>
-                </li>
-
-                <!-- Products page -->
-                <li>
-                    <a href="products.html">Products</a>
-                </li>
-
-                <!-- Services page -->
-                <li>
-                    <a href="services.html">Services</a>
-                </li>
-
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="contact.html">Our Contacts</a></li>
+                <li><a href="enquiry.html">Enquiries</a></li>
+                <li><a href="products.html" aria-current="page">Products</a></li>
+                <li><a href="services.html">Services</a></li>
             </ul>
 
         </nav>
@@ -73,96 +60,104 @@
 
     <main>
 
-        <h2>Our Products</h2>
+        <!-- Main heading describing the page -->
+        <h1>Our Products</h1>
+
+        <p>
+            Explore our cleaning products for homes and workplaces.
+            Use the search box below to find a product.
+        </p>
 
 
-        <!-- Product container using CSS Grid -->
-        <section class="products-container">
+        <!-- ================= PRODUCT SEARCH ================= -->
+
+        <section class="product-search">
+
+            <!-- Label helps visitors identify the search field -->
+            <label for="productSearch">Search Products:</label>
+
+            <!-- Visitors can search for products by name or description -->
+            <input
+                type="search"
+                id="productSearch"
+                placeholder="Search by product name..."
+                autocomplete="off"
+            >
+
+            <!-- JavaScript updates this message when visitors search -->
+            <p id="productSearchMessage" role="status" aria-live="polite">
+                Showing all 5 products.
+            </p>
+
+        </section>
 
 
-            <!-- ================= PRODUCT 1 ================= -->
+        <!-- ================= PRODUCT CARDS ================= -->
 
+        <section class="products-container" id="productsContainer">
+
+            <!-- PRODUCT 1: DISHWASHING LIQUID -->
             <article class="product-card">
 
                 <h3>Dishwashing Liquid</h3>
 
-                <img src="images/Dishwashing_Liquid.jpg"
-                     alt="Dishwashing Liquid"
+                <!-- Descriptive alt text explains what the image shows -->
+                <img src="../images/Dishwashing_Liquid.jpg"
+                     alt="Dishwashing liquid cleaning detergent for washing dishes"
                      class="product-image">
 
-                <p>
-                    Cleaning detergent for washing dishes.
-                </p>
+                <p>Cleaning detergent for washing dishes.</p>
 
-                <p>
-                    Size: Available sizes
-                </p>
+                <p>Size: Available sizes</p>
 
-                <p>
-                    Price: RXX.XX
-                </p>
+                <p>Price: RXX.XX</p>
 
             </article>
 
 
-            <!-- ================= PRODUCT 2 ================= -->
-
+            <!-- PRODUCT 2: BLEACH -->
             <article class="product-card">
 
                 <h3>Bleach</h3>
 
-                <img src="images/bleach.jpg"
-                     alt="Bleach"
+                <img src="../images/bleach.jpg"
+                     alt="Bleach cleaning product for household cleaning and disinfecting"
                      class="product-image">
 
-                <p>
-                    Cleaning detergent for cleaning and disinfecting.
-                </p>
+                <p>Cleaning detergent for cleaning and disinfecting.</p>
 
-                <p>
-                    Size: Available sizes
-                </p>
+                <p>Size: Available sizes</p>
 
-                <p>
-                    Price: RXX.XX
-                </p>
+                <p>Price: RXX.XX</p>
 
             </article>
 
 
-            <!-- ================= PRODUCT 3 ================= -->
-
+            <!-- PRODUCT 3: PINE GEL -->
             <article class="product-card">
 
                 <h3>Pine Gel</h3>
 
-                <img src="images/Pine_gel.png"
-                     alt="Pine Gel"
+                <img src="../images/Pine_gel.png"
+                     alt="Pine gel cleaning detergent for homes and workplaces"
                      class="product-image">
 
-                <p>
-                    Cleaning detergent for homes and workplaces.
-                </p>
+                <p>Cleaning detergent for homes and workplaces.</p>
 
-                <p>
-                    Size: Available sizes
-                </p>
+                <p>Size: Available sizes</p>
 
-                <p>
-                    Price: RXX.XX
-                </p>
+                <p>Price: RXX.XX</p>
 
             </article>
 
 
-            <!-- ================= PRODUCT 4 ================= -->
-
+            <!-- PRODUCT 4: FABRIC SOFTENER -->
             <article class="product-card">
 
                 <h3>Fabric Softener</h3>
 
-                <img src="images/Fabric_Softener.jpg"
-                     alt="Fabric Softener"
+                <img src="../images/Fabric_Softener.jpg"
+                     alt="Fabric softener for softer clothes and fresh-smelling laundry"
                      class="product-image">
 
                 <p>
@@ -170,24 +165,20 @@
                     softer and smell fresh.
                 </p>
 
-                <p>
-                    Size: Available sizes
-                </p>
+                <p>Size: Available sizes</p>
 
-                <p>
-                    Price: RXX.XX
-                </p>
+                <p>Price: RXX.XX</p>
 
             </article>
 
 
-            <!-- ================= PRODUCT 5 ================= -->
-
+            <!-- PRODUCT 5: HOUSEHOLD PINE -->
             <article class="product-card">
 
                 <h3>Household Pine</h3>
-                 <img src="images/Household_Pine.jpg"
-                     alt="Household Pine"
+
+                <img src="../images/Household_Pine.jpg"
+                     alt="Household pine cleaning detergent for cleaning surfaces at home"
                      class="product-image">
 
                 <p>
@@ -195,13 +186,9 @@
                     at home shiny and clean.
                 </p>
 
-                <p>
-                    Size: Available sizes
-                </p>
+                <p>Size: Available sizes</p>
 
-                <p>
-                    Price: RXX.XX
-                </p>
+                <p>Price: RXX.XX</p>
 
             </article>
 
@@ -210,16 +197,20 @@
     </main>
 
 
-    <!-- ================= FOOTER ================= -->
+    <!-- ================= WEBSITE FOOTER ================= -->
 
     <footer>
 
-        <p>© 2026 Uncle's Wife Cleaning Detergents</p>
+        <!-- Displays the copyright year and business name -->
+        <p>
+            &copy; <span id="year">2026</span>
+            Uncle's Wife Cleaning Detergents. All rights reserved.
+        </p>
 
     </footer>
 
 
-    <!-- Links to JavaScript -->
+    <!-- Loads JavaScript for the footer year and product search -->
     <script src="script.js"></script>
 
 </body>
