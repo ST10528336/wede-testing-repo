@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
     <url>
-        <loc>https://example.com/js/index.html</loc>
+        <loc>https://thunderous-horse-8113ad.netlify.app/</loc>
     </url>
+
     <url>
-        <loc>https://example.com/js/about_us.html</loc>
+        <loc>https://thunderous-horse-8113ad.netlify.app/about_us.html</loc>
     </url>
+
     <url>
-        <loc>https://example.com/js/products.html</loc>
+        <loc>https://thunderous-horse-8113ad.netlify.app/products.html</loc>
     </url>
+
     <url>
-        <loc>https://example.com/js/services.html</loc>
+        <loc>https://thunderous-horse-8113ad.netlify.app/services.html</loc>
     </url>
+
     <url>
-        <loc>https://example.com/js/enquiry.html</loc>
+        <loc>https://thunderous-horse-8113ad.netlify.app/enquiry.html</loc>
     </url>
+
     <url>
-        <loc>https://example.com/js/contact.html</loc>
+        <loc>https://thunderous-horse-8113ad.netlify.app/contact.html</loc>
     </url>
-</urlset>
+
+</urlset>s
